@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Express</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+<div class="container">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <h1>Recensisci.it</h1>
+
+
+    <div class="container" id="login-container">
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="inserisci username">
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="inserisci password">
+            <br>
+            </form>
+
+        <div id="login">
+            <p onclick="accediLogin()" id="login-tasto">login</p>
+        </div>
+    </div>
+
+
+    <div id="tutto">
+        <div class="poster">
+            <img src="./images/montagna_1.jpg" width="100%" height="auto" alt="Montagna 1">
+
+            <div id="div1">
+            <p id="like1">-</p>
+            <img onclick="refreshCuore(id,'1','like1')" id="immagine1" src="./images/cuore_vuoto.png" width="3.5%" height="auto" alt="Montagna 1">
+            </div>
+
+            <p>Una tranquilla vista di montagna al tramonto.</p>
+
+            <form>
+                <label for="montagna_1"></label>
+                <textarea id="montagna_1" name="review" placeholder="Scrivi la tua recensione..."></textarea>
+
+                <button  type="button" onclick="aggiungiRecensione('montagna_1')">Invia Recensione</button>
+                <button  type="button" onclick="getPosts('montagna_1')">Vedi le recensioni degli altri</button>
+
+            </form>
+
+
+            <div id="recensioni-montagna_1" class="recensioni" style="display: none;">
+                <!-- Qui verranno caricate le recensioni -->
+            </div>
+
+
+        </div>
+
+        <div class="poster">
+            <img src="./images/montagna_2.jpg" width="100%" height="auto" alt="Montagna 2">
+
+            <div id="div2">
+                <p id="like2">-</p>
+                <img onclick="refreshCuore(id,'2','like2')" id="immagine2"src="./images/cuore_vuoto.png" width="3.5%" height="auto" alt="Montagna 1">
+            </div>
+
+            <p>Un sentiero che si snoda tra le cime innevate.</p>
+
+            <form>
+                <label for="montagna_2"></label>
+                <textarea id="montagna_2" name="review" placeholder="Scrivi la tua recensione..."></textarea>
+
+                <button  type="button" onclick="aggiungiRecensione('montagna_2')">Invia Recensione</button>
+                <button  type="button" onclick="getPosts('montagna_2')">Vedi le recensioni degli altri</button>
+
+            </form>
+
+
+
+            <div id="recensioni-montagna_2" class="recensioni" style="display: none;">
+                <!-- Qui verranno caricate le recensioni -->
+            </div>
+        </div>
+
+        <div class="poster">
+            <img src="./images/montagna_3.jpg" width="100%" height="auto" alt="Montagna 3">
+            <div id="div3">
+                <p id="like3">-</p>
+                <img onclick="refreshCuore(id,'3','like3')" id="immagine3" src="./images/cuore_vuoto.png" width="3.5%" height="auto" alt="Montagna 1">
+            </div>
+
+            <p>Una cima maestosa baciata dalla luce del mattino.</p>
+
+            <form>
+                <label for="montagna_3"></label>
+                <textarea id="montagna_3" name="review" placeholder="Scrivi la tua recensione..."></textarea>
+
+                <button  type="button" onclick="aggiungiRecensione('montagna_3')">Invia Recensione</button>
+                <button  type="button" onclick="getPosts('montagna_3')">Vedi le recensioni degli altri</button>
+
+            </form>
+
+            <div id="recensioni-montagna_3" class="recensioni" style="display: none;">
+                <!-- Qui verranno caricate le recensioni -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../javascripts/index.js"></script>
+</body>
+</html>
